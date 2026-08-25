@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="assets/banner.svg" alt="One skill format for Claude, Codex, and Antigravity" width="100%">
-
+&nbsp;
   <p>Reusable agent skills for Claude Code, Codex, and Antigravity.</p>
 
   <p>
@@ -19,9 +19,7 @@
   </p>
 </div>
 
-Each skill is a self-contained `SKILL.md` package with focused activation rules, supporting resources, and validation appropriate to the work it performs.
-
-The goal is not to collect prompts. The goal is to make difficult work repeatable.
+Each skill is a self-contained `SKILL.md` package with focused activation rules, supporting resources, and validation appropriate to the work it performs. The goal is not to collect prompts. The goal is to make difficult work repeatable.
 
 ## Available skills
 
