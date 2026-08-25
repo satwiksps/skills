@@ -1,0 +1,25 @@
+# Private planning inputs must never enter this repository.
+idea.md
+plan.md
+*-approved-plan-snapshot.*
+
+# Python tooling
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.venv/
+venv/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local reports and build output
+coverage.xml
+htmlcov/
+dist/
+build/

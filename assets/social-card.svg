@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Satwik's Skills</title>
+  <desc id="desc">Production-grade Codex skills</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07080c"/>
+      <stop offset="0.55" stop-color="#12142d"/>
+      <stop offset="1" stop-color="#071e27"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="0.5" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="640" fill="url(#background)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <rect x="88" y="82" width="92" height="92" rx="24" fill="url(#accent)"/>
+  <path d="M116 112h36M116 128h24M116 144h32" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <text x="88" y="326" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="132" font-weight="750" letter-spacing="-5">skills</text>
+  <text x="94" y="398" fill="#c6cce0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="38" font-weight="500">Production-grade Codex workflows.</text>
+  <text x="94" y="462" fill="#8f9ab8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28">I cook them. You steal them.</text>
+  <rect x="88" y="530" width="1104" height="4" rx="2" fill="url(#accent)"/>
+  <text x="94" y="584" fill="#aeb6cf" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="1">github.com/satwiksps/skills</text>
+</svg>

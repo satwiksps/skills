@@ -1,0 +1,40 @@
+name: Project showcase
+description: Share a real public project built with a skill from this repository
+title: "showcase: "
+labels:
+  - showcase
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Public project URL
+      placeholder: https://github.com/owner/project
+    validations:
+      required: true
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill used
+      options:
+        - build-open-source-software
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What did the skill help you ship?
+    validations:
+      required: true
+  - type: textarea
+    id: friction
+    attributes:
+      label: What was difficult or missing?
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Showcase permission
+      options:
+        - label: This project is public and may be linked from the repository README.
+          required: true

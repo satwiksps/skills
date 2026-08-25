@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Open Source Software"
+  short_description: "Build polished, release-ready open-source projects"
+  default_prompt: "Use $build-open-source-software to turn my idea.md into a professional, tested open-source project."

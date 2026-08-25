@@ -1,0 +1,27 @@
+name: Skill request
+description: Propose a repeatable workflow that deserves a skill
+title: "skill: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Repeated problem
+      description: What difficult workflow repeats often enough to justify a skill?
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Observable success
+      description: What result would prove the skill works?
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Important boundaries
+      description: Note privacy, credentials, external actions, destructive operations, or ecosystem constraints.
+    validations:
+      required: true

@@ -1,0 +1,43 @@
+name: Bug report
+description: Report a reproducible problem in a skill
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      options:
+        - build-open-source-software
+        - repository tooling
+        - another skill
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+      description: Include the smallest non-secret reproduction and exact error.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Codex version, Python version, and Git version.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed credentials, private paths, idea.md, plan.md, and private project content.
+          required: true
