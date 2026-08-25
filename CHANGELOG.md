@@ -6,6 +6,12 @@ The format follows Keep a Changelog, and releases use Semantic Versioning for th
 
 ## [Unreleased]
 
+### Changed
+
+- Repositioned the collection for Claude Code, Codex, and Antigravity.
+- Reworked installation guidance around the portable Agent Skills format.
+- Redesigned the repository banner and social preview artwork.
+
 ## [0.1.0] - 2026-08-25
 
 ### Added

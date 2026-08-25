@@ -1,28 +1,101 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
   <title id="title">Satwik's Skills</title>
-  <desc id="desc">Production-grade Codex skills</desc>
+  <desc id="desc">One skill format for Claude, Codex, and Antigravity</desc>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#07080c"/>
-      <stop offset="0.55" stop-color="#12142d"/>
-      <stop offset="1" stop-color="#071e27"/>
+    <linearGradient id="background" x1="20" y1="20" x2="1260" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#080b16"/>
+      <stop offset="0.58" stop-color="#11152b"/>
+      <stop offset="1" stop-color="#071c25"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#8b5cf6"/>
-      <stop offset="0.5" stop-color="#6366f1"/>
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="0.52" stop-color="#818cf8"/>
       <stop offset="1" stop-color="#22d3ee"/>
     </linearGradient>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#191d39"/>
+      <stop offset="1" stop-color="#0c2530"/>
+    </linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#ffffff" stroke-opacity="0.035"/>
     </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="48"/>
+    </filter>
   </defs>
+
   <rect width="1280" height="640" fill="url(#background)"/>
   <rect width="1280" height="640" fill="url(#grid)"/>
-  <rect x="88" y="82" width="92" height="92" rx="24" fill="url(#accent)"/>
-  <path d="M116 112h36M116 128h24M116 144h32" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
-  <text x="88" y="326" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="132" font-weight="750" letter-spacing="-5">skills</text>
-  <text x="94" y="398" fill="#c6cce0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="38" font-weight="500">Production-grade Codex workflows.</text>
-  <text x="94" y="462" fill="#8f9ab8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28">I cook them. You steal them.</text>
-  <rect x="88" y="530" width="1104" height="4" rx="2" fill="url(#accent)"/>
-  <text x="94" y="584" fill="#aeb6cf" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="1">github.com/satwiksps/skills</text>
+  <circle cx="80" cy="620" r="180" fill="#7c3aed" opacity="0.14" filter="url(#glow)"/>
+  <circle cx="1220" cy="10" r="170" fill="#22d3ee" opacity="0.11" filter="url(#glow)"/>
+  <rect x="1" y="1" width="1278" height="638" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <g transform="translate(76 66)" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect width="42" height="42" rx="11" fill="url(#accent)"/>
+    <path d="M12 13h18M12 21h12M12 29h16" fill="none" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round"/>
+    <text x="58" y="27" fill="#c4cbe0" font-size="17" font-weight="750" letter-spacing="2.2">SATWIKSPS / SKILLS</text>
+  </g>
+
+  <g transform="translate(76 172)" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="0" y="0" fill="#ffffff" font-size="66" font-weight="760" letter-spacing="-2.7">One skill format.</text>
+    <text x="0" y="77" fill="#ffffff" font-size="66" font-weight="760" letter-spacing="-2.7">Use it across agents.</text>
+    <text x="2" y="133" fill="#aeb8d2" font-size="23">Reusable workflows with instructions, resources, and tests.</text>
+
+    <g transform="translate(0 178)" font-size="13" font-weight="750" letter-spacing="1">
+      <rect width="140" height="42" rx="21" fill="#ffffff" fill-opacity="0.055" stroke="#a78bfa" stroke-opacity="0.7"/>
+      <circle cx="20" cy="21" r="5" fill="#a78bfa"/>
+      <text x="35" y="26" fill="#eceaff">CLAUDE CODE</text>
+
+      <rect x="152" width="104" height="42" rx="21" fill="#ffffff" fill-opacity="0.055" stroke="#818cf8" stroke-opacity="0.7"/>
+      <circle cx="172" cy="21" r="5" fill="#818cf8"/>
+      <text x="187" y="26" fill="#eceaff">CODEX</text>
+
+      <rect x="268" width="164" height="42" rx="21" fill="#ffffff" fill-opacity="0.055" stroke="#22d3ee" stroke-opacity="0.7"/>
+      <circle cx="288" cy="21" r="5" fill="#22d3ee"/>
+      <text x="303" y="26" fill="#dcfbff">ANTIGRAVITY</text>
+    </g>
+  </g>
+
+  <g transform="translate(817 82)" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect width="382" height="436" rx="28" fill="url(#card)" stroke="#dbeafe" stroke-opacity="0.16"/>
+    <rect x="1" y="1" width="380" height="434" rx="27" fill="none" stroke="url(#accent)" stroke-opacity="0.20"/>
+
+    <g transform="translate(30 30)">
+      <path d="M5 0h28l13 13v48H5z" fill="#ffffff" fill-opacity="0.06" stroke="#a78bfa" stroke-width="1.6"/>
+      <path d="M33 0v13h13" fill="none" stroke="#a78bfa" stroke-width="1.6"/>
+      <path d="M15 29h20M15 39h15M15 49h19" stroke="#dedcff" stroke-width="2.8" stroke-linecap="round"/>
+      <text x="64" y="28" fill="#ffffff" font-size="27" font-weight="720">SKILL.md</text>
+      <text x="64" y="52" fill="#8d99b7" font-size="12" letter-spacing="1.4">PORTABLE ENTRY POINT</text>
+    </g>
+
+    <path d="M30 116H352" stroke="#ffffff" stroke-opacity="0.10"/>
+
+    <g transform="translate(30 144)" font-size="16" font-weight="600">
+      <rect width="322" height="52" rx="13" fill="#ffffff" fill-opacity="0.045"/>
+      <circle cx="23" cy="26" r="5" fill="#a78bfa"/>
+      <text x="41" y="32" fill="#e2e7f7">focused instructions</text>
+
+      <rect y="68" width="322" height="52" rx="13" fill="#ffffff" fill-opacity="0.045"/>
+      <circle cx="23" cy="94" r="5" fill="#818cf8"/>
+      <text x="41" y="100" fill="#e2e7f7">reusable resources</text>
+
+      <rect y="136" width="322" height="52" rx="13" fill="#ffffff" fill-opacity="0.045"/>
+      <circle cx="23" cy="162" r="5" fill="#22d3ee"/>
+      <text x="41" y="168" fill="#e2e7f7">tested tooling</text>
+    </g>
+
+    <g transform="translate(30 362)">
+      <path d="M0 15H206" stroke="url(#accent)" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="0" cy="15" r="4" fill="#a78bfa"/>
+      <circle cx="103" cy="15" r="4" fill="#818cf8"/>
+      <circle cx="206" cy="15" r="4" fill="#22d3ee"/>
+      <rect x="224" width="98" height="30" rx="15" fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-opacity="0.5"/>
+      <text x="247" y="20" fill="#c6f9ff" font-size="11" font-weight="750" letter-spacing="1.3">REUSABLE</text>
+    </g>
+  </g>
+
+  <g transform="translate(76 562)" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect width="1123" height="2" rx="1" fill="url(#accent)" opacity="0.75"/>
+    <text x="0" y="42" fill="#a8b1c9" font-size="20" font-weight="500" letter-spacing="0.6">github.com/satwiksps/skills</text>
+  </g>
 </svg>
