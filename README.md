@@ -1,6 +1,8 @@
 # skills
 
 <div align="center">
+  <img src="assets/banner.svg" alt="One skill format for Claude, Codex, and Antigravity" width="100%">
+
   <p>Reusable agent skills for Claude Code, Codex, and Antigravity.</p>
 
   <p>
