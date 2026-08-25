@@ -1,22 +1,35 @@
-<div align="center">
-  <h1>build-open-source-software</h1>
-  <p><strong>Turn a private idea into tested, documented, release-ready open-source software.</strong></p>
-</div>
+# build-open-source-software
 
-This Codex skill guides a new project from `idea.md` through an approved private plan, implementation, documentation, ecosystem-native packaging, a verified `v0.1.0` release, and pull-request-only governance.
+**Turn a private idea into tested, documented, release-ready open-source software.**
+
+This Agent Skill guides a new project from `idea.md` through an approved private plan, implementation, documentation, ecosystem-native packaging, a verified `v0.1.0` release, and pull-request-only governance. Its shared `SKILL.md` format is supported by Claude Code, Codex, and Antigravity.
 
 ## Install
 
-Ask Codex:
+Install this directory in the location used by your agent:
+
+| Agent | Personal or global location | Invocation |
+| --- | --- | --- |
+| Claude Code | `~/.claude/skills/build-open-source-software/` | `/build-open-source-software` |
+| Codex | `~/.agents/skills/build-open-source-software/` | `$build-open-source-software` |
+| Antigravity | `~/.gemini/config/skills/build-open-source-software/` | Mention `build-open-source-software` |
+
+Claude Code also supports `.claude/skills/` for project-level installation. Codex and Antigravity support `.agents/skills/` for repository or workspace installation. See the repository's [complete installation guide](../../README.md#install-a-skill) for macOS, Linux, and Windows copy commands.
+
+Codex users can install directly by asking Codex:
 
 ```text
 Use $skill-installer to install the skill from https://github.com/satwiksps/skills/tree/main/skills/build-open-source-software
 ```
 
-The skill becomes available on the next turn. Invoke it with:
+For a reproducible install, replace `main` with a release tag such as `v0.1.0`.
+
+Invoke it in the style your agent supports:
 
 ```text
-Use $build-open-source-software with C:\path\to\idea.md
+Claude Code: /build-open-source-software /path/to/idea.md
+Codex: Use $build-open-source-software with /path/to/idea.md
+Antigravity: Use the build-open-source-software skill with /path/to/idea.md
 ```
 
 ## Use it for
@@ -40,7 +53,7 @@ The skill never asks for passwords, private keys, API keys, recovery codes, or l
 
 ## Requirements
 
-- Codex with skill support
+- Claude Code, Codex, Antigravity, or another compatible Agent Skills host
 - Git 2.34 or newer
 - Python 3.11 or newer for the bundled deterministic audit scripts
 - authenticated provider tooling only when the approved workflow reaches an external action
@@ -55,7 +68,9 @@ python -m unittest discover -s tests -v
 
 The suite exercises private-input guarding, authored-text review, release-state checks, archive handling, Git history inspection, and failure behavior. Three symlink-specific tests may skip on Windows systems that do not grant symlink privileges.
 
-The skill cannot prove that arbitrary generated software is correct, secure, or compatible with every ecosystem. It requires project-specific tests, clean-environment verification, evidence review, and explicit user approval at material checkpoints. Human judgment remains necessary for product scope, legal ownership, provider accounts, and final publication.
+The suite validates the bundled deterministic tooling and repository package. It is not a host-level end-to-end test of Claude Code, Codex, or Antigravity.
+
+The skill cannot prove that arbitrary generated software is correct, secure, or compatible with every ecosystem. It requires project-specific tests, clean-environment verification, evidence review, and explicit user approval at material checkpoints. Human judgment remains necessary for product scope, legal ownership, provider accounts, and final publication. Available tools and permissions depend on the host agent.
 
 ## License
 
