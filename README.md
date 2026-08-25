@@ -2,6 +2,16 @@
 
 <div align="center">
   <img src="assets/banner.svg" alt="One skill format for Claude, Codex, and Antigravity" width="100%">
+
+  <p>Reusable agent skills for Claude Code, Codex, and Antigravity.</p>
+
+  <p>
+    <a href="#available-skills">Available skills</a> |
+    <a href="#install-a-skill">Install</a> |
+    <a href="CONTRIBUTING.md">Contributing</a> |
+    <a href="SECURITY.md">Security</a>
+  </p>
+
   <p>
     <a href="https://github.com/satwiksps/skills/actions/workflows/ci.yml"><img src="https://github.com/satwiksps/skills/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-7c3aed.svg" alt="Apache-2.0"></a>
@@ -9,7 +19,7 @@
   </p>
 </div>
 
-Reusable agent skills for Claude Code, Codex, and Antigravity. Each skill is a self-contained `SKILL.md` package with focused activation rules, supporting resources, and validation appropriate to the work it performs.
+Each skill is a self-contained `SKILL.md` package with focused activation rules, supporting resources, and validation appropriate to the work it performs.
 
 The goal is not to collect prompts. The goal is to make difficult work repeatable.
 
