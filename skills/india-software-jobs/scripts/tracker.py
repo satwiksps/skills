@@ -222,7 +222,10 @@ def apply(root: Path, payload: dict[str, Any]) -> dict[str, int]:
                 total = sum(score.values())
                 if item.get("evidence_level") == "alert_only" and total > 60:
                     raise ValueError("Alert-only fit is capped at60")
-                match = f"{total}/100" + ("*" if item.get("provisional", True) else "")
+                provisional = (
+                    item.get("provisional", True) or item.get("evidence_level") == "alert_only"
+                )
+                match = f"{total}/100" + ("*" if provisional else "")
             label = item.get("link_label", "Apply")
             if item.get("exact_link", False) is not True and "unverified" not in label.lower():
                 raise ValueError("An uncertain link needs an explicit unverified label")
@@ -237,9 +240,12 @@ def apply(root: Path, payload: dict[str, Any]) -> dict[str, int]:
                         "Existing run section differs; merge manually without dropping edits"
                     )
                 start = text.index(marker) + len(marker)
-                end = text.find("\n## ", start)
-                end = len(text) if end < 0 else end
-                text = text[:end].rstrip() + "\n" + line + "\n" + text[end:].lstrip("\n")
+                end = start
+                for existing_line in text[start:].splitlines(keepends=True):
+                    if not existing_line.startswith("|"):
+                        break
+                    end += len(existing_line)
+                text = text[:end].rstrip("\n") + "\n" + line + text[end:]
             else:
                 sections = list(DATE.finditer(text))
                 insertion = next((m.start() for m in sections if m.group(1) < discovery), len(text))

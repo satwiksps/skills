@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import copy
 import json
+import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -180,6 +182,78 @@ class TrackerTests(unittest.TestCase):
         self.assertTrue(all(json.loads(p.read_text())["complete"] for p in events))
         self.assertEqual(len(list((self.root / ".job-tracker/backups").glob("*/jobs.md"))), 2)
         self.assertEqual(tracker.check(self.root)["incomplete_writes"], [])
+
+    def test_same_run_addition_stays_in_table_before_manual_notes(self) -> None:
+        self.add(job())
+        path = self.root / "jobs.md"
+        path.write_text(self.text() + "\nMy follow-up note.\n", encoding="utf-8")
+        self.add(job(role="SRE / 456", url="https://example.com/jobs/456"))
+        lines = self.text().splitlines()
+        first = next(i for i, line in enumerate(lines) if "Backend Engineer / 123" in line)
+        self.assertIn("SRE / 456", lines[first + 1])
+        self.assertTrue(self.text().endswith("My follow-up note.\n"))
+
+    def test_alert_score_cannot_drop_provisional_marker(self) -> None:
+        self.add(
+            job(
+                evidence_level="alert_only",
+                provisional=False,
+                score={"skills": 20, "experience": 20, "duties": 10, "eligibility": 10},
+            )
+        )
+        self.assertEqual(tracker.rows(self.text())[0][1][1], "60/100*")
+
+    def test_shared_fallback_status_requires_disambiguation(self) -> None:
+        common = dict(
+            url="https://example.com/careers",
+            exact_link=False,
+            link_label="Career portal - exact role unverified",
+        )
+        self.add(job(**common), job(role="SRE / 456", **common))
+        with self.assertRaises(ValueError):
+            self.status("closed", "employer_closed_notice", url=common["url"])
+        self.status(
+            "closed",
+            "employer_closed_notice",
+            url=common["url"],
+            company="Example",
+            role="SRE / 456",
+        )
+        rows = tracker.rows(self.text())
+        self.assertEqual(rows[0][1][0], "[ ]")
+        self.assertEqual(rows[1][1][0], "~~[ ]~~")
+
+    def test_standalone_installed_copy_cli_from_another_directory(self) -> None:
+        installed = self.root / "installed skill"
+        shutil.copytree(
+            tracker.SKILL,
+            installed,
+            ignore=shutil.ignore_patterns("__pycache__", ".mypy_cache", ".ruff_cache"),
+        )
+        workspace = self.root / "candidate workspace"
+        script = installed / "scripts/tracker.py"
+
+        def run(*args: str) -> dict[str, Any]:
+            completed = subprocess.run(
+                [sys.executable, str(script), *args],
+                cwd=self.root,
+                check=True,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+            data: dict[str, Any] = json.loads(completed.stdout)
+            return data
+
+        run("setup", "--root", str(workspace), "--host", "both")
+        wrapper = (workspace / ".agents/skills/scrap/SKILL.md").read_text(encoding="utf-8")
+        self.assertIn((installed / "SKILL.md").as_posix(), wrapper)
+        decisions = self.root / "decisions.json"
+        decisions.write_text(json.dumps({"add": [job()]}), encoding="utf-8")
+        self.assertEqual(
+            run("apply", "--root", str(workspace), "--input", str(decisions))["new_jobs"], 1
+        )
+        self.assertEqual(run("check", "--root", str(workspace))["jobs"], 1)
 
 
 if __name__ == "__main__":
