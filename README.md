@@ -26,6 +26,7 @@ Each skill is a self-contained `SKILL.md` package with focused activation rules,
 | Skill | What it does | Status |
 | --- | --- | --- |
 | [`build-open-source-software`](skills/build-open-source-software) | Turns a private `idea.md` into an approved plan, working software, documentation, a verified `v0.1.0` release, and PR-only repository governance. | `v0.1.0` |
+| [`india-software-jobs`](skills/india-software-jobs) | Finds India software jobs and internships using your editable profile, tracks matches, validates closures and repairs sources. | Unreleased |
 
 More skills will be added only when they solve a real workflow and include evidence that they work.
 
@@ -51,6 +52,14 @@ Use $skill-installer to install the build-open-source-software skill from https:
 
 For a reproducible install, replace `main` with a release tag such as `v0.1.0`.
 
+For the job-search skill, ask Codex:
+
+```text
+Use $skill-installer to install https://github.com/satwiksps/skills/tree/main/skills/india-software-jobs
+```
+
+Then open a private tracker folder and run `$india-software-jobs /setup`. Edit `me.md` with your preferences and use `/scrap`, `/validate` or `/repair` through the skill. See its [short guide](skills/india-software-jobs/README.md) for host-specific shortcuts and access requirements.
+
 ### Install manually with any supported agent
 
 Clone the collection, then copy the skill directory you want into the appropriate location above:
@@ -59,7 +68,7 @@ Clone the collection, then copy the skill directory you want into the appropriat
 git clone --depth 1 https://github.com/satwiksps/skills.git satwiksps-skills
 ```
 
-The commands below install `build-open-source-software`. Run the pair for your agent.
+The commands below install `build-open-source-software`. Substitute `india-software-jobs` to install the job tracker. Run the pair for your agent.
 
 macOS and Linux:
 
@@ -110,6 +119,8 @@ The shared skill format works across all three agents. Host tools, permissions, 
 The first skill includes a suite of 90 unit and adversarial tests for its deterministic audit tooling. Its checks cover private planning data, transformed content, Git history, authored prose, archive structure, release metadata, legal files, artifact staging, signing contracts, and clean-checkout behavior.
 
 These tests validate the bundled deterministic tooling and repository package. They are not a host-level end-to-end test matrix for every agent UI.
+
+The India job skill tests its local setup and list updates, including duplicate aliases, Applied-mark preservation and evidence-gated closure formatting. Live research depends on the host's web/browser tools; the source seed is not a guarantee of current portal access or exhaustive coverage.
 
 Every skill in this repository must:
 

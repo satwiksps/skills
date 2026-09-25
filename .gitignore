@@ -23,3 +23,12 @@ coverage.xml
 htmlcov/
 dist/
 build/
+
+# Private job trackers (the blank profile template is intentional).
+me.md
+!skills/india-software-jobs/assets/me.md
+.job-tracker/
+*.session
+*.session-journal
+.env
+.env.*
