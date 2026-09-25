@@ -26,7 +26,7 @@ Each skill is a self-contained `SKILL.md` package with focused activation rules,
 | Skill | What it does | Status |
 | --- | --- | --- |
 | [`build-open-source-software`](skills/build-open-source-software) | Turns a private `idea.md` into an approved plan, working software, documentation, a verified `v0.1.0` release, and PR-only repository governance. | `v0.1.0` |
-| [`india-software-jobs`](skills/india-software-jobs) | Finds India software jobs and internships using your editable profile, tracks matches, validates closures and repairs sources. | Unreleased |
+| [`india-software-jobs`](skills/india-software-jobs) | Finds India software jobs and internships using your editable profile, tracks matches, validates closures and repairs sources. | `v0.2.0` |
 
 More skills will be added only when they solve a real workflow and include evidence that they work.
 
@@ -50,12 +50,12 @@ Ask Codex to install the latest version:
 Use $skill-installer to install the build-open-source-software skill from https://github.com/satwiksps/skills/tree/main/skills/build-open-source-software
 ```
 
-For a reproducible install, replace `main` with a release tag such as `v0.1.0`.
+For a reproducible install, replace `main` with a release tag such as `v0.2.0`.
 
 For the job-search skill, ask Codex:
 
 ```text
-Use $skill-installer to install https://github.com/satwiksps/skills/tree/main/skills/india-software-jobs
+Use $skill-installer to install https://github.com/satwiksps/skills/tree/v0.2.0/skills/india-software-jobs
 ```
 
 Then open a private tracker folder and run `$india-software-jobs /setup`. Edit `me.md` with your preferences and use `/scrap`, `/validate` or `/repair` through the skill. See its [short guide](skills/india-software-jobs/README.md) for host-specific shortcuts and access requirements.

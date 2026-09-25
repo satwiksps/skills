@@ -6,6 +6,8 @@ The format follows Keep a Changelog, and releases use Semantic Versioning for th
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-25
+
 ### Added
 
 - `india-software-jobs`: optional candidate profile, India software job and internship discovery, setup/scrap/validate/repair workflows, public source seeds and concise usage guide.
@@ -17,6 +19,11 @@ The format follows Keep a Changelog, and releases use Semantic Versioning for th
 - Reworked installation guidance around the portable Agent Skills format.
 - Redesigned the repository banner and social preview artwork.
 
+### Fixed
+
+- Keep new rows inside their existing discovery table when users add notes beneath it.
+- Always mark alert-only match scores as provisional.
+
 ## [0.1.0] - 2026-08-25
 
 ### Added
@@ -25,5 +32,6 @@ The format follows Keep a Changelog, and releases use Semantic Versioning for th
 - The `build-open-source-software` skill.
 - Cross-platform validation, tests, contribution guidance, and security policy.
 
-[Unreleased]: https://github.com/satwiksps/skills/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/satwiksps/skills/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/satwiksps/skills/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/satwiksps/skills/releases/tag/v0.1.0
