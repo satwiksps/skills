@@ -6,6 +6,11 @@ The format follows Keep a Changelog, and releases use Semantic Versioning for th
 
 ## [Unreleased]
 
+### Added
+
+- `india-software-jobs`: optional candidate profile, India software job and internship discovery, setup/scrap/validate/repair workflows, public source seeds and concise usage guide.
+- Local tracker helpers and behavioral tests for preserving manual edits, deduplicating leads and striking confirmed-closed rows without deletion.
+
 ### Changed
 
 - Repositioned the collection for Claude Code, Codex, and Antigravity.

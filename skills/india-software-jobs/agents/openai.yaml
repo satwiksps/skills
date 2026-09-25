@@ -1,0 +1,4 @@
+interface:
+  display_name: "India Software Jobs"
+  short_description: "Find and track software jobs and internships in India"
+  default_prompt: "Use $india-software-jobs /setup to create my personal India software job tracker."
