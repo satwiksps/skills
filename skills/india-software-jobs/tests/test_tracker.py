@@ -247,7 +247,7 @@ class TrackerTests(unittest.TestCase):
 
         run("setup", "--root", str(workspace), "--host", "both")
         wrapper = (workspace / ".agents/skills/scrap/SKILL.md").read_text(encoding="utf-8")
-        self.assertIn((installed / "SKILL.md").as_posix(), wrapper)
+        self.assertIn((installed / "SKILL.md").resolve().as_posix(), wrapper)
         decisions = self.root / "decisions.json"
         decisions.write_text(json.dumps({"add": [job()]}), encoding="utf-8")
         self.assertEqual(
