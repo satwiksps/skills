@@ -6,6 +6,12 @@ The format follows Keep a Changelog, and releases use Semantic Versioning for th
 
 ## [Unreleased]
 
+### Added
+
+- `resume-helper`: persistent resume workspaces, focused JD matching, skill-confirmation questions, and project selection across prior variants.
+- The original project-bullets workflow, measurement references, helpers, and tests bundled unchanged behind the `project-bullets` mode.
+- Workspace persistence tests, module integrity checks, and concise cross-agent usage documentation.
+
 ## [0.2.0] - 2026-09-25
 
 ### Added

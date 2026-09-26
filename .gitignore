@@ -32,3 +32,6 @@ me.md
 *.session-journal
 .env
 .env.*
+
+# Personal resume state.
+.resume-helper/
