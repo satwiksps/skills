@@ -1,7 +1,7 @@
 [tool.ruff]
 target-version = "py311"
 line-length = 100
-extend-exclude = [".git", ".venv"]
+extend-exclude = [".git", ".venv", "skills/resume-helper/modules/project-bullets/scripts"]
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I"]

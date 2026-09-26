@@ -27,6 +27,7 @@ Each skill is a self-contained `SKILL.md` package with focused activation rules,
 | --- | --- | --- |
 | [`build-open-source-software`](skills/build-open-source-software) | Turns a private `idea.md` into an approved plan, working software, documentation, a verified `v0.1.0` release, and PR-only repository governance. | `v0.1.0` |
 | [`india-software-jobs`](skills/india-software-jobs) | Finds India software jobs and internships using your editable profile, tracks matches, validates closures and repairs sources. | `v0.2.0` |
+| [`resume-helper`](skills/resume-helper) | Remembers a resume library, suggests focused JD matches, selects projects, and develops evidence-backed project bullets. | Available on `main` |
 
 More skills will be added only when they solve a real workflow and include evidence that they work.
 
@@ -154,4 +155,4 @@ Security reports belong in GitHub's private vulnerability reporting flow, not in
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+Apache License 2.0, except the bundled MIT-licensed project-bullets module in Resume Helper. See [LICENSE](LICENSE), [NOTICE](NOTICE), and the [module license](skills/resume-helper/modules/project-bullets/LICENSE).

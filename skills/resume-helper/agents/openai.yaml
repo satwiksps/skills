@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Helper"
+  short_description: "Tailor resumes and verify project achievements"
+  default_prompt: "Use $resume-helper match-jd to suggest focused changes for this job description."

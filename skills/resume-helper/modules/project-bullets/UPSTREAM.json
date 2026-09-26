@@ -1,0 +1,35 @@
+{
+  "source": "project-bullets.zip",
+  "source_sha256": "997c79174091f2992a67467e60db2e57653afc85efa2baaf2756aadeccad91a5",
+  "integration": "SKILL.md renamed WORKFLOW.md to avoid duplicate skill discovery. Standalone README and UI metadata omitted; parent README documents invocation. All included files are unchanged.",
+  "files": {
+    "WORKFLOW.md": {
+      "source": "SKILL.md",
+      "sha256": "c4edfdce1f6651d2eebf39e6a4c520191dc6d934fbd7960b6fecbf7c0e6fc802"
+    },
+    "LICENSE": {
+      "source": "LICENSE",
+      "sha256": "d1b2844f6b097c3b7bfb4ea99bfd96dedad4caad36a535586b639eb0ea5e9634"
+    },
+    "references/measurement.md": {
+      "source": "references/measurement.md",
+      "sha256": "ef35077652594813fdfaf71a228676199dee767d05a97368f4525a9b2fc20385"
+    },
+    "references/writing-and-layout.md": {
+      "source": "references/writing-and-layout.md",
+      "sha256": "19b3b9d0ff4cf2b5b51fc04e2806d2d3448e1ae71926b60f29c3bf81c60f8ab9"
+    },
+    "scripts/measure_text.py": {
+      "source": "scripts/measure_text.py",
+      "sha256": "b9954fa828a9b51c8b5eecc96557daead83d30c821e100b97e44928751a5e3b2"
+    },
+    "scripts/summarize_samples.py": {
+      "source": "scripts/summarize_samples.py",
+      "sha256": "a9c15ffaf3db8417a19d42c44c7dcb2225fff3e68130c2efd8089f5c0dcd0e19"
+    },
+    "scripts/tests/test_helpers.py": {
+      "source": "scripts/tests/test_helpers.py",
+      "sha256": "b0e87adce42888302aee1bc88574e5ce0cbc9e6829dedb293834c4c7e411ffce"
+    }
+  }
+}
